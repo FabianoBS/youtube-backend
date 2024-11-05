@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Diretório de build do TypeScript
+dist/
+
+# Arquivos de log
+*.log
+
+# Arquivos de dependências de desenvolvedor
+package-lock.json
+yarn.lock
+
+# Diretórios do sistema operacional
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# Arquivos de configuração do VS Code
+.vscode/
+
+# Arquivos de teste temporários
+coverage/
+
+# Arquivos de configuração do TypeScript
+tsconfig.tsbuildinfo
+
+# Arquivos do ambiente
+.env
