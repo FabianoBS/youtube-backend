@@ -6,7 +6,16 @@ import { config } from 'dotenv';
 config();
 const app = express();
 
-console.log(process.env.SECRET)
+const cors = require('cors');
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", 'POST, GET, PATCH, DELETE, OPTIONS');
+    next();
+});
+
+app.use(cors());
 
 // Middleware
 
@@ -15,5 +24,10 @@ app.use('/user', userRoutes);
 app.use('/videos', videosRoutes);
 
 
-app.listen(5000);
-console.log('Servidor está rodando na porta http://localhost:5000');
+app.listen(3001);
+console.log('Servidor está rodando na porta http://localhost:3001');
+
+
+
+
+
